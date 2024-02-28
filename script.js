@@ -129,10 +129,9 @@ function validateNewpasswordForm() {
     }
 
     else {
-        setTimeout(function(){
-        document.querySelector(".password-layer").style.display = "block"
-        document.querySelector(".password-msg").style.display = "block"
-    },1000)
+        setTimeout(function () {
+            document.querySelector(".password-layer").style.display = "flex"
+        }, 1000)
         return true
     }
 
@@ -142,5 +141,4 @@ function validateNewpasswordForm() {
 
 function closepopup() {
     document.querySelector(".password-layer").style.display = "none"
-    document.querySelector(".password-msg").style.display = "none"
 }
