@@ -115,6 +115,7 @@ a {
     text-decoration: none;
     margin-left: 7px;
     color: blueviolet;
+    font-weight: 600;
 }
 
 a:hover {
@@ -122,33 +123,29 @@ a:hover {
 }
 
 .password-layer {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    background-color: black;
-    opacity: 0.8;
+    background: rgba(0, 0, 0, 0.7);
     width: 100%;
-    height: 100vh;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    z-index: 2;
     display: none;
 }
 
 .password-msg {
-    position: absolute;
-    top: 35%;
-    left: 37%;
-    width: 25%;
-    height: 30%;
     background-color: blueviolet;
     color: white;
     padding: 30px;
     border: none;
     border-radius: 20px;
-    display: none;
+    text-align: center;
 }
 
-.password-msg p {
-    margin-top: 15%;
-}
 
 .password-msg p i {
     margin-left: 5px;
@@ -162,20 +159,19 @@ a:hover {
 .password-msg a {
     background-color: white;
     color: black;
-    padding: 5px 10px;
-    border-radius: 15px;
-    float: right;
+    padding: 5px 15px;
+    border-radius: 20px;
     text-decoration: none;
-    margin-top: 5%;
 
 }
 
 /* Media Query */
 
 @media screen and (max-width:600px) {
-    body{
+    body {
         background-image: url(imgs/phone\ pg.jpg);
     }
+
     form {
         max-width: 300px;
         width: 100%;
@@ -183,8 +179,6 @@ a:hover {
     }
 
     .password-msg {
-        width: 50%;
-        height: 25%;
-        left: 25%;
+        width: 60%;
     }
 }
